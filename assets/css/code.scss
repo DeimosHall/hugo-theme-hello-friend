@@ -94,3 +94,13 @@
     margin: 0;
   }
 }
+
+// Make Prism code blocks wrap on phones (overrides prism.scss)
+// Note: code must be included too — PrismJS adds the language-* class to it at runtime
+@media ($phone) {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
